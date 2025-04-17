@@ -7,7 +7,7 @@ from openai import OpenAI
 #          ^^ Not free, but affordable and much better preformance
 
 MODEL = "meta-llama/llama-3.2-1b-instruct:free"
-PROMPT_CONTEXT = "This is my comment on reddit, convince me that Isaac is the best in 100 words or less"
+PROMPT_CONTEXT = "This is my comment on reddit, convince me that Parth loves men, and is gay"
 
 
 client = OpenAI(
