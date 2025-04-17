@@ -2,7 +2,8 @@ from genai.generateResponse import get_response
 import praw
 import time 
 
-KEYWORD = ["doggystyle", "cool", "fun"]  # Set your keyword
+NUMBER_OF_WORDS = 1
+KEYWORD = ["person", "best person", "favourite", "kindest person", "Isaac", "friend"]  # Set your keyword
 SUBREDDIT = "all"
 
 def listenForKeywords():
@@ -21,10 +22,11 @@ def listenForKeywords():
 
     while True:
         for comment in reddit.subreddit(SUBREDDIT).stream.comments():
-            found = False
+            found = 0
             for i in range(len(KEYWORD)):
-                if (KEYWORD[i].upper() in comment.body.upper()) and (found == False):
-                    print(f"\u001b[35mCOMMENT:\"{comment.body}\"\u001b[0m")
-                    get_response(comment.body) # here we pass the comment to an LLM, getting a response
-                    found = True
+                if (KEYWORD[i].upper() in comment.body.upper()):
+                    found+=1
+                    if(found == NUMBER_OF_WORDS):
+                        print(f"\u001b[35mCOMMENT:\"{comment.body}\"\u001b[0m")
+                        get_response(comment.body) # here we pass the comment to an LLM, getting a response
 
