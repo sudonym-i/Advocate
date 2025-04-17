@@ -76,11 +76,14 @@
       position: sticky;
       border-style: solid;
       border-size: 2px;
-      border-color: #E24D3D;
-      box-shadow: 5px 5px 15px rgba(60, 61, 55, 1);
+      border-color: #fd3131;
       opacity: 1;
+      box-shadow: 5px 5px 15px rgba(60, 61, 55, 1);
+      transition: box-shadow 0.3s ease-in-out;
     }
-
+    #avatar:hover {
+      box-shadow: 5px 5px 40px rgba(90, 91, 85, 1);
+    }
     .body {
       background-color: #1B1F22;
       display: flex;
@@ -124,7 +127,6 @@
       position: sticky;
       color: white;
       background-color: rgba(0, 0, 0, 0.25);
-      box-shadow: 5px 5px 15px rgba(60, 61, 55, 1);
       padding: 0px;
       border-radius: 10px;
       display: flex;
@@ -136,8 +138,12 @@
       border-style: solid;
       border-color: rgb(45, 197, 230);
       border-width: 2px;
+      box-shadow: 5px 5px 15px rgba(60, 61, 55, 1);
+      transition: box-shadow 0.3s ease-in-out;
     }
-
+    #titlebar:hover {
+      box-shadow: 5px 5px 40px rgba(90, 91, 85, 1);
+    }
     #buttons {
       display: flex;
       flex-direction: row;
@@ -149,14 +155,42 @@
       text-decoration: none;
       margin-right: 55px;
       color: white;
-      font-size: 1.25em;
-      font-family: Lexend, sans-serif;
+      font-size: 1.5em;
+      font-family: monospace;
       border-style: solid;
-      font-weight: 300;
+      font-weight: 100;
       border-width: 2px;
-      border-color: #E24D3D;
+      border-color: #fd3131;
       padding: 5px;
       border-radius: 3px;
+     transition: background-color 0.3s ease-in-out;
+    }
+    .titlebuttons:hover {
+      background-color: #fd3131;
+
+    }
+
+
+    .logintitlebuttons {
+      text-decoration: none;
+      margin-right: 55px;
+      color: black;
+      font-size: 1.7em;
+      font-family: monospace;
+      border-style: solid;
+      font-weight: 700;
+      border-width: 2px;
+      background-color: #fd3131;
+      padding: 5px;
+      border-radius: 3px;
+      transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;;
+    }
+    .logintitlebuttons:hover {
+       background-color: rgba(0,0,0,0);
+       border-style: solid;
+       border-color: #fd3131;
+       color: white;
+
     }
 
     .bodyText {
@@ -185,7 +219,7 @@
       background-color: #2DC5E6;
     }
 
-    #panel {
+    .panel {
       margin-top: 1em;
       margin-bottom: 5em;
       display: flex;
@@ -203,6 +237,10 @@
       width: 70vw;
       color: white;
       box-shadow: 5px 5px 15px rgba(60, 61, 55, 1);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+    .panel:hover {
+      box-shadow: 5px 5px 40px rgba(90, 91, 85, 1);
     }
 
     .headers {
@@ -234,16 +272,23 @@
       margin-bottom: 3px;
       color: white;
       height: fit-content;
-      opacity: 0.7;
+      opacity: 1;
       font-size: 45px;
       padding: 0px;
     }
-    .works_list{
-      font-size: 2em;
-      font-family: lexend;
-      width: 20vw;
 
-    }
+.works_list li {
+      font-family: monospace;
+      width: 50vw;
+      font-size: 2em;
+  transition: transform 0.2s ease;
+}
+
+.works_list li:hover {
+  transform: translateX(5px);
+  color: rgb(45, 197, 230);
+}
+
     /*    ----------------------------------------------------------------------------------------------------------------------------------------      Mobile Changes             */
     @media screen and (max-width: 800px) {
       #buttons {
@@ -386,9 +431,9 @@
       <button id="toggle"></button>
       <div id="buttons">
         <a href="" class="titlebuttons">How it Works</a>
-        <a href="" class="titlebuttons">Pricing</a>
         <a href="" class="titlebuttons">Guardrails</a>
-        <a href="" class="titlebuttons">Log In</a>
+        <a href="" class="titlebuttons">Pricing</a>
+        <button class="logintitlebuttons" (click)="openLoginModal()">Login</button>
       </div>
     </div>
 
@@ -402,18 +447,26 @@
     </div>
   </div>
 
-    <div id="panel">
+    <div class="panel">
       <h1 id="mainTitle">How it Works</h1>
       <div id="bodyone">
           <ul class="works_list">
-           <li>Make an account</li> <br>
-           <li>Specify what comments you want Advocate to respond to</li> <br>
-          <li>Let Advocate speak on your behalf, either automatically or with approval for each message</li> <br>
-</ul>
+           <li>Make an account</li> <br> <br>
+           <li>Specify what comments you want Advocate to respond to</li> <br> <br>
+           <li>specify how you would like Advocate to respond, and provide context for you application</li> <br> <br>
+           <li>Let Advocate speak on your behalf, either automatically or with approval for each message</li> <br> <br>
+          </ul>
 
       </div>
     </div>
-      <div id="panel">
+      <div class="panel">
+        <h1 id="mainTitle">Guardrails</h1>
+          <p>Advocate has an option which allows you to approve of each response before it is posted to the platform.</p>
+
+      </div>
+      <div class="panel">
+        <h1 id="mainTitle">Pricing</h1>
+          <p>Advocate has an option which allows you to approve of each response before it is posted to the platform.</p>
 
       </div>
      </div>
