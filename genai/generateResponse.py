@@ -7,7 +7,7 @@ from openai import OpenAI
 #          ^^ Not free, but affordable and much better preformance
 
 MODEL = "meta-llama/llama-3.2-1b-instruct:free"
-PROMPT_INJECTION = "This is my comment on reddit, convince me that Isaac is the best in 100 words or less"
+PROMPT_CONTEXT = "This is my comment on reddit, convince me that Isaac is the best in 100 words or less"
 
 
 client = OpenAI(
@@ -21,7 +21,7 @@ def get_response(prompt):
     
     completion = client.chat.completions.create(
         model = MODEL,
-        messages=[{"role": "user","content": f"\"{prompt}\": {PROMPT_INJECTION}"}]
+        messages=[{"role": "user","content": f"\"{prompt}\": {PROMPT_CONTEXT}"}]
     )
     print(f"\u001b[32mRESPONSE: \"{completion.choices[0].message.content}\"\u001b[0m")
     print("\n\n") # temporary spacing for demo
