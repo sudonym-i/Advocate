@@ -1,3 +1,4 @@
+from genai.generateResponse import get_response
 import praw
 import time 
 
@@ -20,12 +21,10 @@ def listenForKeywords():
 
     while True:
         for comment in reddit.subreddit(SUBREDDIT).stream.comments():
+            found = False
             for i in range(len(KEYWORD)):
-                if KEYWORD[i].upper() in comment.body.upper():
-                    cache = open(f"reddit/reddit_chache/{identifier}" ,"w")
-                    cache.write(comment.body)
-                    cache.close()
+                if (KEYWORD[i].upper() in comment.body.upper()) and (found == False):
+                    print(f"\u001b[35mCOMMENT:\"{comment.body}\"\u001b[0m")
+                    get_response(comment.body) # here we pass the comment to an LLM, getting a response
+                    found = True
 
-listenForKeywords()
-#  ^^ can be usd to call as a funtion later, If i choose 
-#  to implement things dfferently in the future
