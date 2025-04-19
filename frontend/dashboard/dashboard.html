@@ -24,22 +24,92 @@
     <title>Advocate Dashboard</title>
   </head>
   <body>
-  <div class="login-form">
-           
-
-  <div class="login-toggle">
-        <p style="color: rgb(45, 197, 230);" >Login</p>
-    <label class="switch">
-      <input type="checkbox">
-      <span class="slider round"></span>
-    </label>
-        <p style="color: #fd3131;" >Sign up</p>
-  </div>
-
-      <input class="input-box" type="box" name="email" value="Email@address.com">
-      <input class="input-box" type="box" name="password" value="Password1234">
-
+ <div class="container">
+    <div class="toggle-container">
+      <div class="toggle-slider"></div>
+      <div class="toggle-option" id="login-option" onclick="toggleForms('login')">Login</div>
+      <div class="toggle-option" id="signup-option" onclick="toggleForms('signup')">Sign Up</div>
     </div>
+    
+    <div class="form-container">
+      <form id="login-form" class="active">
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="signup-name">Full Name</label>
+          <input type="text" id="signup-name" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-confirm">Confirm Password</label>
+          <input type="password" id="signup-confirm" required>
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+  
+    <div class="dashboard-container">
+      <div>
+        <div class="account-stats">
+             <p class="responses-status">Number of responses:</p>
+             <p class="responses-words-status">Responded words:</p>
+             <p class="responses-status">Links distrobuted:</p>
+        </div>
+        <div class="respsonse-setttings">
+        <div class="search-items">
+          <input type="box" name="Look for:" value="best, person ,me">
+        </div>
 
+          <div class="context-settings">
+          <h2>Prompt Context</h2>
+         <input type="box" name="" value="you are a salesperson. convince me that Advocat is the best"> 
+          </div>
+        </div>
+    </div>
+      
+    </div>
+  <script>
+    function toggleForms(formType) {
+      const loginForm = document.getElementById('login-form');
+      const signupForm = document.getElementById('signup-form');
+      const loginOption = document.getElementById('login-option');
+      const signupOption = document.getElementById('signup-option');
+      const slider = document.querySelector('.toggle-slider');
+      
+      if (formType === 'login') {
+        loginForm.classList.add('active');
+        signupForm.classList.remove('active');
+        loginOption.style.color = 'white';
+        signupOption.style.color = '#777';
+        slider.style.left = '0';
+        slider.style.backgroundColor = 'rgb(45, 197, 230)';
+      } else {
+        loginForm.classList.remove('active');
+        signupForm.classList.add('active');
+        loginOption.style.color = '#777';
+        signupOption.style.color = 'white';
+        slider.style.left = '50%';
+        slider.style.backgroundColor = '#fd3131';
+      }
+    }
+  </script>
   </body>
 </html>

@@ -100,6 +100,7 @@
     }
 
     #titlebar {
+      margin-top: 2em;
       position: sticky;
       color: white;
       background-color: rgba(0, 0, 0, 0.25);
@@ -154,6 +155,7 @@
       font-size: 1.7em;
       font-family: monospace;
       border-style: solid;
+      border-color: rgba(0,0,0,0);
       border-width: 2px;
       background-color: #fd3131;
       padding: 8px;
@@ -181,7 +183,7 @@
       width: 80vw;
     }
     .panel {
-      margin-top: 1em;
+      margin-top: 3em;
       margin-bottom: 5em;
       display: flex;
       flex-direction: column;
