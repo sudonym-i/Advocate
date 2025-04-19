@@ -67,15 +67,8 @@
     #avatar:hover {
       box-shadow: 5px 5px 40px rgba(90, 91, 85, 1);
     }
-    .body {
-      background-color: #1B1F22;
-      display: flex;
-      flex-direction: row;
-      justify-content: end;
-      align-items: start;
-    }
 
-    #theWorldWideDiv {
+  #theWorldWideDiv {
       width: 80vw;
       border-radius: 10px;
       align-items: top;
