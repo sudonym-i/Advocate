@@ -68,7 +68,7 @@ body {
 }
 
 #avatar:hover {
-  box-shadow: 5px 5px 40px #5a5b5599;
+  box-shadow: 5px 5px 40px #5a5b55;
 }
 
 #theWorldWideDiv {
@@ -82,7 +82,7 @@ body {
   flex-direction: column;
   display: none;
   right: 0;
-  box-shadow: 0 0 10px #0009;
+  box-shadow: 0 0 10px #000;
 }
 
 #toggle {
@@ -116,7 +116,7 @@ body {
 }
 
 #titlebar:hover {
-  box-shadow: 5px 5px 40px #5a5b5599;
+  box-shadow: 5px 5px 40px #5a5b55;
 }
 
 #buttons {
@@ -197,7 +197,7 @@ body {
 }
 
 .panel:hover {
-  box-shadow: 5px 5px 40px #5a5b5599;
+  box-shadow: 5px 5px 40px #5a5b55;
 }
 
 .headers {

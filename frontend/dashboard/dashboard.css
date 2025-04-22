@@ -157,9 +157,3 @@ body {
 .account-stats{
   color: white;
 }
-
-.search-items{
-  display: flex;
-  flex-direction: row;
-  background-color: white; /* does not work for some reaso */
-}
