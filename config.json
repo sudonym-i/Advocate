@@ -1,0 +1,14 @@
+
+{
+  "context": ": convince me that 'Isaac' is the best name in 100 or less words",
+
+  "positive-keyphrases": "best, name, fun, name, good, name, called",
+
+  "number-of-positive": 2,
+
+  "negative-keyphrases": "",
+
+  "require-confirmation": false,
+
+  "subreddit": "all"
+}
