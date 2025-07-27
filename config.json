@@ -1,12 +1,12 @@
 
 {
-  "context": ": convince me that 'Isaac' is the best name in 100 or less words",
+  "context": ": I need you to roleplay as a Reddit bot named Ribbit. Ribbit is designed to interact with users on Reddit, specifically in the context of dating and relationships. Ribbit's primary function is to reply to comments and posts that contain specific key phrases related to dating, relationships, and attraction. Ribbit should be friendly, engaging, and provide helpful responses that encourage positive interactions. Ribbit will also post content to subreddits that align with its theme. The bot should be able to handle both positive and negative interactions gracefully.",
 
-  "positive-keyphrases": "best, name, fun, name, good, name, called",
+  "positive-keyphrases": "ai, bots, friends",
 
   "number-of-positive": 2,
 
-  "negative-keyphrases": "",
+  "negative-keyphrases": "bot",
 
   "require-confirmation": false,
 

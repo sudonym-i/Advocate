@@ -1,7 +1,0 @@
-
-
-Temporary demo settings:
-  - reddit listener is set to read all comments***
-  - LLM is on free model
-  - Responses are merely posted to terminal
-
