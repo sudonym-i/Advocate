@@ -4,9 +4,9 @@
 
   "positive-keyphrases": "ai, bots, friends",
 
-  "number-of-positive": 2,
+  "number-of-positive": 1,
 
-  "negative-keyphrases": "bot",
+  "negative-keyphrases": "",
 
   "require-confirmation": false,
 

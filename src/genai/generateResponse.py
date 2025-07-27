@@ -1,5 +1,5 @@
 from openai import OpenAI
-from reddit.redditPost import replyToLatestPost
+from reddit.redditReply import replyToLatestPost
 
 #meta-llama/llama-3.2-1b-instruct:free
 #              ^^ Free but terrible LLM model - Definitely use for testing however
