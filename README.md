@@ -35,11 +35,6 @@ This is where you sepcify what you want the bot to do. Once you have this config
 
 will likely need to run **chmod +x ribbit.sh** to grant execute permission
 
-----
-WINDOWS
-----
-
-Although windows is less supported, libraries can be managed manually, and the script can be run from /src directory using **python3 main.py <<< 1** for replying, and **python3 main.py <<< 2** for post mode
 
 ----
 SAMPLE
