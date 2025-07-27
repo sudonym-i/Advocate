@@ -1,9 +1,11 @@
 
-This project will require you to make "auth-reddit" and "auth-ai" (csv) files in the /src directory. These will include your api keys login information. 
+This project will require you to make "auth-reddit" and "auth-ai" files in the /src directory. These will include your api keys login information. 
 
 auth-ai (at least if you use openrouter) only requires one api key to be pasted into it.
+                        **one line**
 
 auth-reddit requires (in order): client_id, client_secret, user_agent, username, password
+               **seperaate by putting each on a seperate line**
 
 Dependencies: python3--full
 
