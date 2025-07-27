@@ -1,5 +1,5 @@
 printf "\n Ribbit: a reddit bot - enter mode \n\n"
-printf "(1) reply to responses \n"
+printf "(1) reply to comments \n"
 printf "(2) post to subreddits \n\n" 
 read -p "--> " mode
 
