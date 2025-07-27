@@ -27,7 +27,11 @@ USE
 ----
 
 In the root directory, edit "config.json". You can specify what context you would like to feed to the AI model before responding to the reddit posts ("context"), what keywords to look for in posts you want to reply to ("positive-keyphrases"), how many of these keywords ought to be present ("number-of-positives"), and a couple more parameters. 
-This is where you sepcify what you want the bot to do. Once you have this configured, execute "ribbit.sh" (located in root directory) to start the bot, and follow the prompts.
+This is where you sepcify what you want the bot to do. Once you have this configured, execute "ribbit.sh" 
+
+**./ribbit.sh**
+
+(located in root directory) to start the bot, and follow the prompts.
 
 will likely need to run **chmod +x ribbit.sh** to grant execute permission
 
